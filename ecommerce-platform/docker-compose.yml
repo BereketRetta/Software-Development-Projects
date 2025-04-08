@@ -1,0 +1,147 @@
+version: '3.8'
+
+services:
+  # MongoDB service
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - ecommerce-network
+
+  # Redis for caching and sessions
+  redis:
+    image: redis:latest
+    container_name: redis
+    restart: always
+    ports:
+      - "6379:6379"
+    networks:
+      - ecommerce-network
+
+  # RabbitMQ for inter-service communication
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    restart: always
+    ports:
+      - "5672:5672"  # AMQP port
+      - "15672:15672"  # Management UI
+    networks:
+      - ecommerce-network
+
+  # API Gateway
+  api-gateway:
+    build:
+      context: ./api-gateway
+    container_name: api-gateway
+    restart: always
+    ports:
+      - "8000:8000"
+    environment:
+      - NODE_ENV=development
+      - PORT=8000
+    depends_on:
+      - auth-service
+      - product-service
+      - order-service
+    networks:
+      - ecommerce-network
+
+  # Authentication Service
+  auth-service:
+    build:
+      context: ./services/auth-service
+    container_name: auth-service
+    restart: always
+    ports:
+      - "8001:8001"
+    environment:
+      - NODE_ENV=development
+      - PORT=8001
+      - MONGODB_URI=mongodb://mongodb:27017/auth-service
+      - JWT_SECRET=your_jwt_secret
+    depends_on:
+      - mongodb
+      - rabbitmq
+    networks:
+      - ecommerce-network
+
+  # Product Service
+  product-service:
+    build:
+      context: ./services/product-service
+    container_name: product-service
+    restart: always
+    ports:
+      - "8002:8002"
+    environment:
+      - NODE_ENV=development
+      - PORT=8002
+      - MONGODB_URI=mongodb://mongodb:27017/product-service
+    depends_on:
+      - mongodb
+      - rabbitmq
+    networks:
+      - ecommerce-network
+
+  # Order Service
+  order-service:
+    build:
+      context: ./services/order-service
+    container_name: order-service
+    restart: always
+    ports:
+      - "8003:8003"
+    environment:
+      - NODE_ENV=development
+      - PORT=8003
+      - MONGODB_URI=mongodb://mongodb:27017/order-service
+    depends_on:
+      - mongodb
+      - rabbitmq
+      - product-service
+    networks:
+      - ecommerce-network
+
+  # Payment Service
+  payment-service:
+    build:
+      context: ./services/payment-service
+    container_name: payment-service
+    restart: always
+    ports:
+      - "8004:8004"
+    environment:
+      - NODE_ENV=development
+      - PORT=8004
+      - MONGODB_URI=mongodb://mongodb:27017/payment-service
+    depends_on:
+      - mongodb
+      - rabbitmq
+    networks:
+      - ecommerce-network
+
+  # Web Client
+  web-client:
+    build:
+      context: ./web-client
+    container_name: web-client
+    restart: always
+    ports:
+      - "80:80"
+    depends_on:
+      - api-gateway
+    networks:
+      - ecommerce-network
+
+networks:
+  ecommerce-network:
+    driver: bridge
+
+volumes:
+  mongodb_data:

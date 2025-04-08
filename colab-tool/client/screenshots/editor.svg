@@ -1,0 +1,84 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="500" fill="#f9fafb"/>
+  
+  <!-- Navbar -->
+  <rect width="800" height="64" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="40" y="40" font-family="Arial" font-size="24" font-weight="bold" fill="#0ea5e9">CollabTool</text>
+  
+  <!-- Document title -->
+  <text x="300" y="40" font-family="Arial" font-size="18" font-weight="bold" fill="#111827" text-anchor="middle">Project Proposal</text>
+  
+  <!-- User avatar -->
+  <circle cx="740" cy="32" r="20" fill="#0ea5e9"/>
+  <text x="740" y="38" font-family="Arial" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">BE</text>
+  
+  <!-- Toolbar -->
+  <rect x="40" y="80" width="720" height="40" rx="4" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+  
+  <!-- Toolbar buttons -->
+  <rect x="50" y="88" width="24" height="24" rx="4" fill="#f3f4f6"/>
+  <text x="62" y="106" font-family="Arial" font-size="14" font-weight="bold" fill="#4b5563" text-anchor="middle">B</text>
+  
+  <rect x="80" y="88" width="24" height="24" rx="4" fill="#f3f4f6"/>
+  <text x="92" y="106" font-family="Arial" font-size="14" font-style="italic" fill="#4b5563" text-anchor="middle">I</text>
+  
+  <rect x="110" y="88" width="24" height="24" rx="4" fill="#f3f4f6"/>
+  <text x="122" y="106" font-family="Arial" font-size="14" text-decoration="underline" fill="#4b5563" text-anchor="middle">U</text>
+  
+  <line x1="145" y1="88" x2="145" y2="112" stroke="#e5e7eb" stroke-width="1"/>
+  
+  <rect x="155" y="88" width="40" height="24" rx="4" fill="#f3f4f6"/>
+  <text x="175" y="106" font-family="Arial" font-size="12" fill="#4b5563" text-anchor="middle">H1</text>
+  
+  <rect x="200" y="88" width="40" height="24" rx="4" fill="#f3f4f6"/>
+  <text x="220" y="106" font-family="Arial" font-size="12" fill="#4b5563" text-anchor="middle">H2</text>
+  
+  <line x1="250" y1="88" x2="250" y2="112" stroke="#e5e7eb" stroke-width="1"/>
+  
+  <rect x="260" y="88" width="24" height="24" rx="4" fill="#f3f4f6"/>
+  <text x="272" y="106" font-family="Arial" font-size="14" fill="#4b5563" text-anchor="middle">•</text>
+  
+  <rect x="290" y="88" width="24" height="24" rx="4" fill="#f3f4f6"/>
+  <text x="302" y="104" font-family="Arial" font-size="12" fill="#4b5563" text-anchor="middle">1.</text>
+  
+  <!-- Editor area -->
+  <rect x="40" y="130" width="720" height="300" rx="4" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+  
+  <!-- Document content -->
+  <text x="60" y="160" font-family="Arial" font-size="20" font-weight="bold" fill="#111827">Project Proposal: Real-time Collaboration Tool</text>
+  
+  <text x="60" y="190" font-family="Arial" font-size="16" fill="#111827">Introduction</text>
+  
+  <foreignObject x="60" y="210" width="680" height="120">
+    <p xmlns="http://www.w3.org/1999/xhtml" style="margin:0; font-family:Arial; font-size:14px; line-height:1.5; color:#374151;">
+      This proposal outlines the development of a cross-platform real-time collaboration tool that will enable teams to work together on documents simultaneously from both web and mobile interfaces. The application will leverage WebSocket technology for instant updates and implement Operational Transformation for conflict resolution.
+    </p>
+  </foreignObject>
+  
+  <text x="60" y="290" font-family="Arial" font-size="16" fill="#111827">Technical Stack</text>
+  
+  <foreignObject x="60" y="310" width="680" height="100">
+    <ul xmlns="http://www.w3.org/1999/xhtml" style="margin:0; font-family:Arial; font-size:14px; line-height:1.5; color:#374151;">
+      <li>Backend: Node.js, Express, MongoDB, Socket.IO</li>
+      <li>Web Frontend: React, TypeScript, Draft.js, Tailwind CSS</li>
+      <li>Mobile: React Native, Expo, React Navigation</li>
+    </ul>
+  </foreignObject>
+  
+  <!-- Collaborators & Cursors -->
+  <!-- User cursor 1 -->
+  <rect x="450" y="212" width="2" height="18" fill="#0ea5e9"/>
+  <rect x="450" y="190" width="60" height="20" rx="4" fill="#0ea5e9"/>
+  <text x="480" y="204" font-family="Arial" font-size="10" fill="#ffffff" text-anchor="middle">John D.</text>
+  
+  <!-- User cursor 2 -->
+  <rect x="180" y="330" width="2" height="18" fill="#8b5cf6"/>
+  <rect x="180" y="310" width="60" height="20" rx="4" fill="#8b5cf6"/>
+  <text x="210" y="324" font-family="Arial" font-size="10" fill="#ffffff" text-anchor="middle">Sarah M.</text>
+  
+  <!-- Active users indicator -->
+  <rect x="40" y="440" width="120" height="24" rx="12" fill="#f3f4f6"/>
+  <circle cx="55" cy="452" r="6" fill="#10b981"/>
+  <text x="100" y="456" font-family="Arial" font-size="12" fill="#4b5563" text-anchor="middle">3 users active</text>
+</svg>

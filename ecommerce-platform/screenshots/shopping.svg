@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <!-- Background with overlay -->
+  <rect width="800" height="500" fill="#f5f7fa" />
+  <rect width="800" height="500" fill="rgba(0, 0, 0, 0.5)" />
+  
+  <!-- Cart sidebar -->
+  <rect x="400" y="0" width="400" height="500" fill="white" />
+  
+  <!-- Cart header -->
+  <rect x="400" y="0" width="400" height="60" fill="white" stroke="#e2e8f0" stroke-width="1" />
+  <text x="430" y="38" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#334155">Your Cart</text>
+  <circle cx="760" cy="30" r="15" fill="white" stroke="#94a3b8" stroke-width="1" />
+  <path d="M753 30 L767 30 M760 23 L760 37" stroke="#94a3b8" stroke-width="2" />
+  
+  <!-- Cart Items -->
+  <!-- Item 1 -->
+  <g>
+    <rect x="430" y="80" width="340" height="80" fill="white" />
+    <rect x="430" y="80" width="70" height="70" fill="#e2e8f0" rx="2" />
+    <text x="465" y="125" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">Image</text>
+    
+    <text x="515" y="100" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#334155">Wireless Headphones</text>
+    <text x="515" y="125" font-family="Arial, sans-serif" font-size="14" fill="#64748b">$129.99</text>
+    
+    <!-- Quantity controller -->
+    <rect x="515" y="135" width="25" height="25" fill="white" stroke="#e2e8f0" stroke-width="1" rx="2 0 0 2" />
+    <text x="527" y="152" font-family="Arial, sans-serif" font-size="14" fill="#334155" text-anchor="middle">-</text>
+    
+    <rect x="540" y="135" width="35" height="25" fill="white" stroke="#e2e8f0" stroke-width="1" />
+    <text x="557" y="152" font-family="Arial, sans-serif" font-size="14" fill="#334155" text-anchor="middle">1</text>
+    
+    <rect x="575" y="135" width="25" height="25" fill="white" stroke="#e2e8f0" stroke-width="1" rx="0 2 2 0" />
+    <text x="587" y="152" font-family="Arial, sans-serif" font-size="14" fill="#334155" text-anchor="middle">+</text>
+    
+    <text x="630" y="152" font-family="Arial, sans-serif" font-size="14" fill="#ef4444">Remove</text>
+  </g>
+  
+  <!-- Item 2 -->
+  <g>
+    <rect x="430" y="170" width="340" height="80" fill="white" />
+    <rect x="430" y="170" width="70" height="70" fill="#e2e8f0" rx="2" />
+    <text x="465" y="215" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">Image</text>
+    
+    <text x="515" y="190" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#334155">Smart Watch</text>
+    <text x="515" y="215" font-family="Arial, sans-serif" font-size="14" fill="#64748b">$89.99</text>
+    
+    <!-- Quantity controller -->
+    <rect x="515" y="225" width="25" height="25" fill="white" stroke="#e2e8f0" stroke-width="1" rx="2 0 0 2" />
+    <text x="527" y="242" font-family="Arial, sans-serif" font-size="14" fill="#334155" text-anchor="middle">-</text>
+    
+    <rect x="540" y="225" width="35" height="25" fill="white" stroke="#e2e8f0" stroke-width="1" />
+    <text x="557" y="242" font-family="Arial, sans-serif" font-size="14" fill="#334155" text-anchor="middle">2</text>
+    
+    <rect x="575" y="225" width="25" height="25" fill="white" stroke="#e2e8f0" stroke-width="1" rx="0 2 2 0" />
+    <text x="587" y="242" font-family="Arial, sans-serif" font-size="14" fill="#334155" text-anchor="middle">+</text>
+    
+    <text x="630" y="242" font-family="Arial, sans-serif" font-size="14" fill="#ef4444">Remove</text>
+  </g>
+  
+  <!-- Item 3 -->
+  <g>
+    <rect x="430" y="260" width="340" height="80" fill="white" />
+    <rect x="430" y="260" width="70" height="70" fill="#e2e8f0" rx="2" />
+    <text x="465" y="305" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">Image</text>
+    
+    <text x="515" y="280" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#334155">Bluetooth Speaker</text>
+    <text x="515" y="305" font-family="Arial, sans-serif" font-size="14" fill="#64748b">$79.99</text>
+    
+    <!-- Quantity controller -->
+    <rect x="515" y="315" width="25" height="25" fill="white" stroke="#e2e8f0" stroke-width="1" rx="2 0 0 2" />
+    <text x="527" y="332" font-family="Arial, sans-serif" font-size="14" fill="#334155" text-anchor="middle">-</text>
+    
+    <rect x="540" y="315" width="35" height="25" fill="white" stroke="#e2e8f0" stroke-width="1" />
+    <text x="557" y="332" font-family="Arial, sans-serif" font-size="14" fill="#334155" text-anchor="middle">1</text>
+    
+    <rect x="575" y="315" width="25" height="25" fill="white" stroke="#e2e8f0" stroke-width="1" rx="0 2 2 0" />
+    <text x="587" y="332" font-family="Arial, sans-serif" font-size="14" fill="#334155" text-anchor="middle">+</text>
+    
+    <text x="630" y="332" font-family="Arial, sans-serif" font-size="14" fill="#ef4444">Remove</text>
+  </g>
+  
+  <!-- Cart Footer -->
+  <rect x="400" y="400" width="400" height="100" fill="white" stroke="#e2e8f0" stroke-width="1" />
+  
+  <!-- Total Section -->
+  <text x="430" y="430" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#334155">Total:</text>
+  <text x="740" y="430" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#334155" text-anchor="end">$389.97</text>
+  
+  <!-- Action Buttons -->
+  <rect x="430" y="445" width="340" height="40" rx="4" fill="#2563eb" />
+  <text x="600" y="470" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">Proceed to Checkout</text>
+  
+  <rect x="430" y="495" width="340" height="40" rx="4" fill="#e5e7eb" />
+  <text x="600" y="520" font-family="Arial, sans-serif" font-size="14" fill="#4b5563" text-anchor="middle">Clear Cart</text>
+  
+  <!-- Main site background (faded) -->
+  <!-- Header Bar (faded) -->
+  <rect width="800" height="64" fill="#2563eb" opacity="0.3" />
+  
+  <!-- Products Grid (faded) -->
+  <!-- Row 1 -->
+  <g opacity="0.3">
+    <!-- Product 1 -->
+    <rect x="30" y="144" width="175" height="280" rx="4" fill="white" stroke="#e2e8f0" />
+    <rect x="30" y="144" width="175" height="160" fill="#e2e8f0" rx="4 4 0 0" />
+    
+    <!-- Product 2 -->
+    <rect x="225" y="144" width="175" height="280" rx="4" fill="white" stroke="#e2e8f0" />
+    <rect x="225" y="144" width="175" height="160" fill="#e2e8f0" rx="4 4 0 0" />
+  </g>
+</svg>
